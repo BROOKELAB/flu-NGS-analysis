@@ -1,0 +1,18 @@
+#!/bin/bash
+# ----------------SLURM Parameters----------------
+#SBATCH -p normal
+#SBATCH -n 6
+#SBATCH --mem=15g
+#SBATCH -N 1
+#SBATCH --mail-user=netid@illinois.edu
+#SBATCH --mail-type=ALL
+#SBATCH -J flu_pipeline
+#SBATCH -D /home/groups/hpcbio_shared/cbrooke_lab/new_project_folder/
+# ----------------Load Modules--------------------
+module load nextflow/24.10.4-Java-15.0.1
+# ----------------Commands------------------------
+export NXF_HOME=/home/groups/hpcbio_shared/cbrooke_lab/new_project_folder
+export NXF_DISABLE_CHECK_LATEST=true
+export LMOD_DISABLE_SAME_NAME_AUTOSWAP="no"
+
+nextflow run flu_ngs.nf
