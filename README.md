@@ -65,13 +65,13 @@ If you don't have a biocluster account, you can request one here: https://www.ig
 
 1. Create a .csv metadata file containing your sample names in the first column and their subtypes in the second:
   
-   <img width="134" alt="Screenshot 2025-06-24 at 10 51 25 AM" src="https://github.com/user-attachments/assets/45169d90-e621-4c92-829a-e4baeb93ca8f" />
+   <img width="135" alt="Screenshot 2025-06-30 at 2 59 59 PM" src="https://github.com/user-attachments/assets/e6680572-b244-40ec-96ff-3ceac260011a" />
 
    It's important that this file is in .csv format (not .tsv or .xls). The subtype values can be "H1N1", "H3N2", or "IBV".
 
 2. Download and open the nextflow template file ("flu_ngs.nf") to change any parameters that you want to alter before you run the pipeline:
    
-   <img width="824" alt="Screenshot 2025-06-30 at 2 21 22 PM" src="https://github.com/user-attachments/assets/de91bf92-4579-46a2-b228-787397a2513e" />
+   <img width="745" alt="Screenshot 2025-06-30 at 3 01 06 PM" src="https://github.com/user-attachments/assets/75553f56-0b66-4603-8b7f-c0a243375408" />
 
     The first section of the file contains the editable parameters that you may want to change. (For example: the path to your project directory, the name of your .csv file, the locations of reference sequences, thresholds for variant-calling, and the versions of different softwares used in the pipeline). You can also specify these parameters on the command line when you run the pipeline (see: **Running the pipeline**). 
 
@@ -138,8 +138,7 @@ If you don't have a biocluster account, you can request one here: https://www.ig
    
     The commands above run the pipeline directly from your terminal window, which will give you progress updates as each step is completed:
 
-      <img width="528" alt="Screenshot 2025-06-27 at 5 15 55 PM" src="https://github.com/user-attachments/assets/190d4349-bfc3-4784-aba4-ec9b58400899" />
-
+      <img width="573" alt="Screenshot 2025-06-30 at 3 11 37 PM" src="https://github.com/user-attachments/assets/768e9a6a-6332-472e-bd76-572e9b4b0ba2" />
 
     Running the pipeline this way means that the run will terminate when you exit the terminal window or shut off your computer. If you have a lot of samples, it may be easier to run the pipeline using a SLURM script instead (see: **Running nextflow with SLURM**).
 
