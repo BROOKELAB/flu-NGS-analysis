@@ -6,7 +6,7 @@
 */                    
 
 // Path to project directory
-params.projectPath = "/home/groups/hpcbio_shared/cbrooke_lab/new_project_folder"
+params.projectPath = "/home/groups/hpcbio_shared/cbrooke_lab/Mireille/test_nf"
 
 // Path to raw reads directory
 params.fastqPath = "${params.projectPath}/fastq"
@@ -667,6 +667,7 @@ workflow {
                 .splitCsv(header: true)
                 .map{row -> tuple(row.sample, row.subtype)}
                 .toSortedList( { a, b -> a[0] <=> b[0] } )
+                .flatMap()
                 .map{item -> item[0]}
                 
     //create channel for sample subtypes
@@ -674,6 +675,7 @@ workflow {
                 .splitCsv(header: true)
                 .map{row -> tuple(row.sample, row.subtype)}
                 .toSortedList( { a, b -> a[0] <=> b[0] } )
+                .flatMap()
                 .map{item -> item[1]}
     
     // trim adapters
