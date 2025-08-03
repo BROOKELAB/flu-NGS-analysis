@@ -42,13 +42,13 @@ If you don't have a biocluster account, you can request one here: https://www.ig
 2. Create a new directory for your project and navigate inside it:
    
    ```
-   mdkir new_project_folder
+   mkdir new_project_folder
    cd new_project_folder
    ```
 3. Create a subdirectory for your sequence data and navigate inside it:
    
    ```
-   mdkir fastq
+   mkdir fastq
    cd fastq
    ```
     It doesn't matter what you call your project folder, but the sequences folder should be named "fastq".
