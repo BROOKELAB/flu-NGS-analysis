@@ -664,16 +664,16 @@ workflow {
     
     //create channel for sample names
     sample_ch = Channel.fromPath(params.metaPath)
-                .splitCsv(header: true)
-                .map{row -> tuple(row.sample, row.subtype)}
-                .toSortedList( { a, b -> a[0] <=> b[0] } )
+                .splitCsv(skip: 1)
+                .map{row -> tuple(row[0], row[1])}
+                .toSortedList( { a, b -> a[0] <=> b[0] })
                 .flatMap()
                 .map{item -> item[0]}
-                
+    
     //create channel for sample subtypes
     subtype_ch = Channel.fromPath(params.metaPath)
-                .splitCsv(header: true)
-                .map{row -> tuple(row.sample, row.subtype)}
+                .splitCsv(skip: 1)
+                .map{row -> tuple(row[0], row[1])}
                 .toSortedList( { a, b -> a[0] <=> b[0] } )
                 .flatMap()
                 .map{item -> item[1]}
