@@ -194,7 +194,7 @@ Using a SLURM script (instead of running a command directly from the terminal) a
    
 3. Enter your project directory after "SBATCH -D".
    
-4. Under "#-----Commands-----", type the same nextflow run command that you would otherwise enter into the terminal.
+4. Under "#-----Commands-----", set the NXF_HOME variable to your project directory, and type the same nextflow run command that you would otherwise enter into the terminal.
    
 5. Within your project directory, create a new script file:
    
