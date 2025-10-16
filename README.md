@@ -27,10 +27,6 @@ If you don't have a biocluster account, you can request one here: https://www.ig
    
 2. Give your IGB password when prompted.
 
-3. Log on to a compute node using:
-   ```
-   srun --pty /bin/bash
-   ```  
 
 # Downloading raw sequence data
 
@@ -54,8 +50,13 @@ If you don't have a biocluster account, you can request one here: https://www.ig
     It doesn't matter what you call your project folder, but the sequences folder should be named "fastq".
    
 4. Download your sequencing data by copying the curl command provided in the email from the sequencing facility.
+   
+5. Log on to a compute node using:
+   ```
+   srun --pty /bin/bash
+   ```  
 
-5. Uncompress the downloaded .tar file:
+7. Uncompress the downloaded .tar file:
    
    ```
    tar -xf name_of_file.tar.bz2
@@ -97,6 +98,8 @@ If you don't have a biocluster account, you can request one here: https://www.ig
    ```
 
 # Running the pipeline
+
+(If you have more than a handful of samples, see: **Running nextflow with SLURM**)
 
 1. Inside your project folder on the biocluster, load nextflow:
    
