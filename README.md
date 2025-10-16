@@ -60,7 +60,7 @@ If you don't have a biocluster account, you can request one here: https://www.ig
 6. Uncompress the downloaded .tar file:
    
    ```
-   tar -xf name_of_file.tar.bz2
+   tar -xvf name_of_file.tar.bz2
    ```
 
 # Preparing to run nextflow
