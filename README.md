@@ -54,9 +54,10 @@ If you don't have a biocluster account, you can request one here: https://www.ig
 5. Log on to a compute node using:
    ```
    srun --pty /bin/bash
-   ```  
+   ```
+   (Every process on the cluster that doesn't require an internet connection should be done on a compute node.)
 
-7. Uncompress the downloaded .tar file:
+6. Uncompress the downloaded .tar file:
    
    ```
    tar -xf name_of_file.tar.bz2
