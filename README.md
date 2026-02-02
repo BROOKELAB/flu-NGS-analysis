@@ -108,25 +108,32 @@ If you don't have a biocluster account, you can request one here: https://www.ig
    module load nextflow/24.10.4-Java-15.0.1
    ```
    
-2. Set the directory for the environmental variable NXF_HOME:
+   Alternatively, you can see which versions of nextflow are available on the biocluster with:
+   
+   ```
+   module spider nextflow
+   ```
+   This will return a list of nextflow modules, and you can choose a more updated version if necessary. Sometimes the cluster deletes old software after new updates are       downloaded, so it may be necessary to instead choose the most recent version of the software (can be loaded with the same ```module load``` command as above, just replace ```nextflow/24.10.4-Java-15.0.1``` with the updated version name). 
+   
+3. Set the directory for the environmental variable NXF_HOME:
    
    ```
    export NXF_HOME=/home/groups/hpcbio_shared/cbrooke_lab/new_project_folder
    ```
    
-3. Disable network checking:
+4. Disable network checking:
    
    ```
    export NXF_DISABLE_CHECK_LATEST=true
    ```
    
-4. Enable module swapping:
+5. Enable module swapping:
    
    ```
    export LMOD_DISABLE_SAME_NAME_AUTOSWAP="no"
    ```
    
-5. You're ready to run the pipeline! This can be done with:
+6. You're ready to run the pipeline! This can be done with:
    
    ```
    nextflow run flu_ngs.nf
